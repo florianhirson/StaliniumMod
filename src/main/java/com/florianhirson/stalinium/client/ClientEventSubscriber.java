@@ -46,6 +46,8 @@ public final class ClientEventSubscriber {
         registerModel(ModItems.ITEM_STALINIUM_LEGGINGS);
         registerModel(ModItems.ITEM_STALINIUM_BOOTS);
 
+        registerModel(ModItems.ITEM_YEET_GUN);
+
         registerModel(Item.getItemFromBlock(ModBlocks.BLOCK_STALINIUM));
     }
 

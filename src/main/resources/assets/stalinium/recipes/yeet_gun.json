@@ -1,0 +1,28 @@
+{
+  "type": "stalinium:yeet_gun",
+  "pattern": [
+    "idi",
+    "c  ",
+    "ili"
+  ],
+  "key": {
+    "c": {
+      "item": "pneumaticcraft:air_canister",
+      "data": 32767
+    },
+    "d": {
+      "type": "forge:ore_dict",
+      "ore": "dyeYellow"
+    },
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIronCompressed"
+    },
+    "l": {
+      "item": "minecraft:lever"
+    }
+  },
+  "result": {
+    "item": "stalinium:yeet_gun"
+  }
+}

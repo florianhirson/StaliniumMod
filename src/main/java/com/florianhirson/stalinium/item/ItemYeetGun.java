@@ -1,6 +1,8 @@
 package com.florianhirson.stalinium.item;
 
 import com.florianhirson.stalinium.Stalinium;
+import com.florianhirson.stalinium.entity.EntityYeet;
+import com.florianhirson.stalinium.lib.Sounds;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -26,8 +28,8 @@ public class ItemYeetGun extends Item {
 
 
         double factor = 0.2D * 2;
-        worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, Sounds.CANNON_SOUND, SoundCategory.PLAYERS, 1.0F, 0.7F + (float) factor * 0.2F, false);
-        EntityVortex vortex = new EntityVortex(worldIn, playerIn);
+        worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, Sounds.YEET_SOUND, SoundCategory.PLAYERS, 1.0F, 0.7F + (float) factor * 0.2F, false);
+        EntityYeet vortex = new EntityYeet(worldIn, playerIn);
         Vec3d directionVec = playerIn.getLookVec().normalize();
         vortex.posX += directionVec.x;
         vortex.posY += directionVec.y;
@@ -40,5 +42,10 @@ public class ItemYeetGun extends Item {
 
 
         return ActionResult.newResult(EnumActionResult.SUCCESS, iStack);
+    }
+
+    @Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return false;
     }
 }

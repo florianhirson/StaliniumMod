@@ -45,7 +45,9 @@ public final class EventSubscriber {
                 new ItemStaliniumArmor(StaliniumMaterials.STALINIUM_ARMOR, EntityEquipmentSlot.HEAD, "itemStaliniumHelmet", "item_stalinium_helmet"),
                 new ItemStaliniumArmor(StaliniumMaterials.STALINIUM_ARMOR, EntityEquipmentSlot.CHEST, "itemStaliniumChestplate", "item_stalinium_chestplate"),
                 new ItemStaliniumArmor(StaliniumMaterials.STALINIUM_ARMOR, EntityEquipmentSlot.LEGS, "itemStaliniumLeggings", "item_stalinium_leggings"),
-                new ItemStaliniumArmor(StaliniumMaterials.STALINIUM_ARMOR, EntityEquipmentSlot.FEET, "itemStaliniumBoots", "item_stalinium_boots")
+                new ItemStaliniumArmor(StaliniumMaterials.STALINIUM_ARMOR, EntityEquipmentSlot.FEET, "itemStaliniumBoots", "item_stalinium_boots"),
+
+                new ItemYeetGun("itemYeetGun", "item_yeet_gun")
         };
 
         final Item[] itemBlocks = {

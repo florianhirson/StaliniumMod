@@ -21,4 +21,6 @@ public class ModItems {
     public static final ItemStaliniumArmor ITEM_STALINIUM_CHESTPLATE = null;
     public static final ItemStaliniumArmor ITEM_STALINIUM_LEGGINGS = null;
     public static final ItemStaliniumArmor ITEM_STALINIUM_BOOTS = null;
+
+    public static final ItemYeetGun ITEM_YEET_GUN = null;
 }
