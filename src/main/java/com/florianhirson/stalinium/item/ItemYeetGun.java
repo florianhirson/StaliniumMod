@@ -1,0 +1,44 @@
+package com.florianhirson.stalinium.item;
+
+import com.florianhirson.stalinium.Stalinium;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
+
+public class ItemYeetGun extends Item {
+
+    public ItemYeetGun(String unlocalizedName, String registryName) {
+        setTranslationKey(Stalinium.MODID + "." + unlocalizedName);
+        setRegistryName(registryName);
+        setCreativeTab(Stalinium.STALINIUM_TAB);
+    }
+
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+
+        ItemStack iStack = playerIn.getHeldItem(handIn);
+
+
+        double factor = 0.2D * 2;
+        worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, Sounds.CANNON_SOUND, SoundCategory.PLAYERS, 1.0F, 0.7F + (float) factor * 0.2F, false);
+        EntityVortex vortex = new EntityVortex(worldIn, playerIn);
+        Vec3d directionVec = playerIn.getLookVec().normalize();
+        vortex.posX += directionVec.x;
+        vortex.posY += directionVec.y;
+        vortex.posZ += directionVec.z;
+        vortex.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 0.0F);
+        vortex.motionX *= factor;
+        vortex.motionY *= factor;
+        vortex.motionZ *= factor;
+        if (!worldIn.isRemote) worldIn.spawnEntity(vortex);
+
+
+        return ActionResult.newResult(EnumActionResult.SUCCESS, iStack);
+    }
+}

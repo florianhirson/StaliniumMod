@@ -1,0 +1,14 @@
+# Items
+item.stalinium.itemStaliniumIngot.name=Stalinium Ingot
+item.stalinium.itemStaliniumPickaxe.name=Stalinium Pickaxe
+item.stalinium.itemStaliniumAxe.name=Stalinium Axe
+item.stalinium.itemStaliniumShovel.name=Stalinium Shovel
+item.stalinium.itemStaliniumHoe.name=Stalinium Hoe
+item.stalinium.itemStaliniumSword.name=Stalinium Sword
+item.stalinium.itemTea.name=100 Stat Tea
+
+# Blocks
+tile.stalinium.blockStalinium.name=Stalinium Block
+
+#Creative Tab
+itemGroup.stalinium=Stalinium Mod

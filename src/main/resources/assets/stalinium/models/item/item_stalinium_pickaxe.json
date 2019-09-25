@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "stalinium:items/item_stalinium_pickaxe"
+  }
+}
