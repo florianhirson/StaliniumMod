@@ -1,6 +1,6 @@
 {
   "textures": {
-    "face": "stalinium:blocks/yeet_gun"
+    "face": "stalinium:blocks/item_yeet_gun"
   },
   "elements": [
     {

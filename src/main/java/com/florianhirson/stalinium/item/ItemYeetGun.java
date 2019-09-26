@@ -27,7 +27,7 @@ public class ItemYeetGun extends Item {
         ItemStack iStack = playerIn.getHeldItem(handIn);
 
 
-        double factor = 0.2D * 2;
+        double factor = 5;
         worldIn.playSound(playerIn.posX, playerIn.posY, playerIn.posZ, Sounds.YEET_SOUND, SoundCategory.PLAYERS, 1.0F, 0.7F + (float) factor * 0.2F, false);
         EntityYeet vortex = new EntityYeet(worldIn, playerIn);
         Vec3d directionVec = playerIn.getLookVec().normalize();

@@ -1,5 +1,6 @@
 package com.florianhirson.stalinium.render;
 
+import com.florianhirson.stalinium.Stalinium;
 import com.florianhirson.stalinium.entity.EntityYeet;
 import com.florianhirson.stalinium.init.ModItems;
 import com.florianhirson.stalinium.lib.Textures;
@@ -17,15 +18,16 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.lwjgl.opengl.GL11;
-
-import static com.florianhirson.stalinium.util.YeetUtils.RL;
 
 @SideOnly(Side.CLIENT)
 public class RenderEntityYeet extends RenderEntity {
 
-    private static final ResourceLocation TEXTURE = RL(Textures.ITEM_YEET + ".png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation("stalinium:textures/items/" + Textures.ITEM_YEET + ".png");
 
+    public static final Logger LOGGER =  LogManager.getLogger(Stalinium.MODID);
 
     public static final IRenderFactory<EntityYeet> FACTORY = RenderEntityYeet::new;
 
@@ -33,7 +35,9 @@ public class RenderEntityYeet extends RenderEntity {
         super(manager);
     }
 
-    private void renderVortex(EntityYeet entity, double x, double y, double z, float var1, float partialTicks) {
+    private void renderYeet(EntityYeet entity, double x, double y, double z, float var1, float partialTicks) {
+        LOGGER.info(Stalinium.NAME + "Render entityYeet");
+
         if (!entity.hasRenderOffsetX()) {
             entity.setRenderOffsetX(calculateXoffset());
         }
@@ -121,9 +125,11 @@ public class RenderEntityYeet extends RenderEntity {
 
     }
 
+
     @Override
     public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9) {
-        renderVortex((EntityYeet) par1Entity, par2, par4, par6, par8, par9);
+        LOGGER.info(Stalinium.NAME + "Render entityYeet");
+        renderYeet((EntityYeet) par1Entity, par2, par4, par6, par8, par9);
     }
 
     @Override

@@ -41,9 +41,9 @@ public class EntityYeet extends EntityThrowable {
     @Override
     public void onUpdate() {
         super.onUpdate();
-        motionX *= 0.95D; // equal to the potion effect friction. 0.95F
-        motionY *= 0.95D;
-        motionZ *= 0.95D;
+        motionX *= 5; // equal to the potion effect friction. 0.95F
+        motionY *= 5;
+        motionZ *= 5;
         if (motionX * motionX + motionY * motionY + motionZ * motionZ < 0.1D) {
             setDead();
         }

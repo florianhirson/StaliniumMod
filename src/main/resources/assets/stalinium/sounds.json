@@ -1,3 +1,12 @@
 {
-  "ussr": { "sounds":["stalinium:ussr"], "subtitle": "stalinium.subtitle.ussr" }
+  "ussr": {
+    "sounds":["stalinium:ussr"],
+    "subtitle": "stalinium.subtitle.ussr"
+  },
+  "yeet_gun":{
+    "category":"ambient",
+    "sounds":[
+      "stalinium:yeet_gun"
+    ]
+  }
 }

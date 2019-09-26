@@ -1,7 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "stalinium:yeet_gun"
+    "model": "stalinium:item_yeet_gun"
   },
   "variants": {
     "normal": [{ }],
